@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AEO - Answer Engine Optimisation - Amazing WebTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="services.css"></head>
+
+<body>
+
+<nav class="navbar" id="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="img/logo-dark.png" alt="Logo">
+            </div>
+            <div class="logo-text">Amazing<span>Webtech</span></div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+
+            <!-- Mobile Menu Header -->
+            <li class="mobile-menu-header" style="list-style:none;">
+                <a href="#" class="mobile-logo">
+                    <div class="mobile-logo-icon">
+                        <img src="img/logo-dark.png" alt="Logo">
+                    </div>
+                    <div class="mobile-logo-text">Amazing<span>Webtech</span></div>
+                </a>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+
+            <!-- Mobile Search -->
+            <li class="mobile-search" style="list-style:none;">
+                <div class="mobile-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+            </li>
+
+            <!-- Nav Label -->
+            <li class="mobile-nav-label" style="list-style:none;">Menu</li>
+
+            <li><a href="#" class="active"><i class="fas fa-home" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Home</a></li>
+
+            <!-- ===== SERVICES MEGA DROPDOWN ===== -->
+            <li class="services-dropdown" id="servicesDropdown">
+                <a href="#" id="servicesToggle">
+                    <i class="fas fa-th-large" style="margin-right:10px; font-size:14px; opacity:0.6;"></i>
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="mega-menu">
+                    <div class="mega-menu-header">
+                        <h3><i class="fas fa-th-large"></i> Our Services</h3>
+                        <a href="#" class="view-all-link">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-grid">
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-webdev"><i class="fas fa-laptop-code"></i></div>
+                            <div class="service-info">
+                                <h4>Web & Mobile App Dev</h4>
+                                <p>Responsive websites & native apps</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-uiux"><i class="fas fa-pencil-ruler"></i></div>
+                            <div class="service-info">
+                                <h4>UI/UX Design</h4>
+                                <p>Intuitive user experiences</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-branding"><i class="fas fa-palette"></i></div>
+                            <div class="service-info">
+                                <h4>Branding & Corporate</h4>
+                                <p>Logo, identity & brand strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-seo"><i class="fas fa-search"></i></div>
+                            <div class="service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Rank higher on search engines</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <div class="service-info">
+                                <h4>Digital Marketing</h4>
+                                <p>Social media, PPC & campaigns</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-geo"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="service-info">
+                                <h4>GEO Services</h4>
+                                <p>Generative engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-aeo"><i class="fas fa-robot"></i></div>
+                            <div class="service-info">
+                                <h4>AEO Services</h4>
+                                <p>Answer engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-printing"><i class="fas fa-print"></i></div>
+                            <div class="service-info">
+                                <h4>Printing Services</h4>
+                                <p>Business cards, flyers & more</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-hosting"><i class="fas fa-server"></i></div>
+                            <div class="service-info">
+                                <h4>Web Hosting</h4>
+                                <p>Fast, secure & reliable hosting</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-email"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="service-info">
+                                <h4>Professional Email</h4>
+                                <p>Custom domain email solutions</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-content"><i class="fas fa-feather-alt"></i></div>
+                            <div class="service-info">
+                                <h4>Content Creation</h4>
+                                <p>Blogs, copywriting & strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-video"><i class="fas fa-video"></i></div>
+                            <div class="service-info">
+                                <h4>2D/3D Video Production</h4>
+                                <p>Animation, motion & explainers</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fas fa-info-circle" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Contact</a></li>
+
+            <!-- Mobile Divider -->
+            <li class="mobile-divider" style="list-style:none;"></li>
+
+            <!-- Mobile CTA Buttons -->
+            <li class="mobile-cta" style="list-style:none;">
+                <a href="#" class="mobile-cta-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#" class="mobile-contact-btn">
+                    <i class="fas fa-phone"></i> Book a Free Call
+                </a>
+            </li>
+
+            <!-- Mobile Social Links -->
+            <li class="mobile-social" style="list-style:none;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <a href="#" class="btn-primary">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+<section class="service-hero">
+    <div class="hero-content">
+        <div class="hero-icon-wrap">
+            <i class="fas fa-microphone"></i>
+        </div>
+        <div class="hero-label">
+            <i class="fas fa-star"></i> Amazing WebTech
+        </div>
+        <h1 class="hero-title"><span class="line1">Answer Engine</span><span class="line2">Optimisation</span></h1>
+        <p class="hero-desc">Be the answer AI chooses. Optimise your content for ChatGPT, Gemini, Perplexity, and voice search to capture the future of search and stay ahead of the competition.</p>
+        <div class="hero-badges">
+            <span class="hero-badge"><i class="fas fa-robot"></i> AI Search</span>
+            <span class="hero-badge"><i class="fas fa-microphone-alt"></i> Voice Search</span>
+            <span class="hero-badge"><i class="fas fa-question-circle"></i> Featured Snippets</span>
+            <span class="hero-badge"><i class="fas fa-brain"></i> LLM Optimisation</span>
+        </div>
+        <div class="hero-btns">
+            <a href="contact.html" class="btn-hero-primary"><i class="fas fa-rocket"></i> Optimise for AI</a>
+            <a href="#overview" class="btn-hero-outline"><i class="fas fa-eye"></i> Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark2" id="overview">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-left">
+                <div class="overview-label"><i class="fas fa-microphone"></i> AEO Specialists</div>
+                <h2 class="overview-title">Win in <span>AI-Powered Search</span></h2>
+                <p class="overview-desc">Answer Engine Optimisation (AEO) is the next frontier of search. As AI assistants like ChatGPT, Google's SGE, and Alexa become primary search tools, we ensure your brand is the answer they provide to your customers' questions.</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="fc-icon"><i class="fas fa-robot"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>AI Visibility</h4>
+                            <p>Ensure your brand appears in ChatGPT, Gemini & Claude responses</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon"><i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>Voice Search</h4>
+                            <p>Optimise for Alexa, Siri, and Google Assistant queries</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon"><i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>Featured Snippets</h4>
+                            <p>Capture position zero in traditional search results</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon"><i class="fas fa-sitemap"></i></div>
+                        <div class="fc-body">
+                            <h4>Structured Data</h4>
+                            <p>Schema markup that helps AI understand your content</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-box">
+                    <div class="benefits-box-title"><i class="fas fa-brain"></i> AEO Benefits</div>
+                    <div class="benefits-list">
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>AI Answer Citations</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Voice Search Ranking</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Featured Snippet Capture</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Entity Optimisation</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Knowledge Graph</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>FAQ Schema</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-right">
+                <div class="img-wrap">
+                    <img src="img/aeo.jpg" alt="AEO" onerror="this.src='https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=380&fit=crop'">
+                </div>
+                <div class="stats-row">
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="60%">0</span>
+                        <span class="stat-lbl">Voice Search Growth</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="50+">0</span>
+                        <span class="stat-lbl">AEO Clients</span>
+                    </div>
+                    <div class="stat-div">
+                    </div>
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="3x">0</span>
+                        <span class="stat-lbl">Visibility Boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section section-dark3">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-cogs"></i> AEO Process
+            </div>
+            <h2 class="section-title">Our AEO <span>Strategy</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="process-num">01</div>
+                    <h4>Content Audit</h4>
+                    <p>Identify opportunities for AI and voice search optimisation.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="process-num">02</div>
+                    <h4>Question Mapping</h4>
+                    <p>Map user questions and conversational queries in your niche.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-pen-alt"></i>
+                    </div>
+                    <div class="process-num">03</div>
+                    <h4>Content Creation</h4>
+                    <p>Create answer-focused content optimised for AI engines.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="process-num">04</div>
+                    <h4>Schema & Markup</h4>
+                    <p>Implement structured data for maximum AI comprehension.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section section-dark2">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-tools"></i> AEO Tools
+            </div>
+            <h2 class="section-title">Tools & <span>Platforms</span></h2>
+        </div>
+        <div class="tools-wrap">
+            <span class="tool-chip">Schema.org Markup</span>
+            <span class="tool-chip">Google SGE</span>
+            <span class="tool-chip">ChatGPT Plugins</span>
+            <span class="tool-chip">Perplexity AI</span>
+            <span class="tool-chip">Google Featured Snippets</span>
+            <span class="tool-chip">Alexa Skills</span>
+            <span class="tool-chip">Google Q&A</span>
+            <span class="tool-chip">People Also Ask</span>
+        </div>
+    </div>
+</section>
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-question-circle"></i> FAQ
+            </div>
+            <h2 class="section-title">AEO <span>Questions</span></h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>What exactly is AEO and why does it matter?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">AEO (Answer Engine Optimisation) focuses on optimising your content to appear as direct answers in AI assistants, voice search, and featured snippets. With AI-powered search growing rapidly, AEO is becoming as important as traditional SEO.
+
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>How is AEO different from SEO?</span>
+                    <div class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Traditional SEO focuses on ranking in list-based search results. AEO focuses on becoming the definitive answer that AI tools and voice assistants cite directly — often meaning your brand gets mentioned even without a website visit.
+
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>Can AEO and SEO work together?</span>
+                    <div class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Absolutely! They complement each other perfectly. Strong SEO provides the foundation, while AEO ensures you capture the growing share of AI-powered searches. We often implement both strategies simultaneously.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-band">
+    <div class="cta-band-inner">
+        <h2>Be the Answer AI Recommends</h2>
+        <p>Get ahead of the AI search revolution and capture tomorrow's traffic today.</p>
+        <div class="cta-band-btns">
+            <a href="contact.html" class="btn-primary-grad">
+                <i class="fas fa-microphone"></i> Start AEO Strategy</a>
+                <a href="tel:+919099014070" class="btn-outline-white"><i class="fas fa-phone"></i> Call Us</a>
+            </div>
+        </div>
+    </section>
+<section class="section section-dark">
+    <div class="container">
+    <div class="section-head">
+        <div class="section-label"><i class="fas fa-th"></i> Related</div>
+        <h2 class="section-title">Related <span>Services</span></h2>
+    </div>
+    <div class="related-grid">
+        <div class="related-card">
+            <div class="related-icon"><i class="fas fa-search"></i></div>
+            <h3>SEO</h3>
+            <p>Traditional SEO that works alongside your AEO strategy.</p>
+            <a href="seo.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="related-card">
+            <div class="related-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>GEO</h3>
+            <p>Generative Engine Optimisation for AI content generation.</p>
+            <a href="geo.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="related-card">
+            <div class="related-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Digital Marketing</h3>
+            <p>Full-funnel digital marketing to amplify your AEO results.</p>
+            <a href="digitalmarketing.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="img/logo-dark.png" height="50px" width="50px">
+                <p>Future-ready digital agency keeping you ahead of search trends.</p>
+                <div class="footer-socials">
+                    <a href="#" class="soc-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li>
+                        <a href="seo.html">SEO</a>
+                    </li>
+                    <li><a href="aeo.html">AEO</a></li>
+                    <li><a href="geo.html">GEO</a></li>
+                    <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="newsletter-wrap">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2021 Amazing WebTech · Made with <i class="fas fa-heart"></i> for great people.</p>
+            </div>
+        </div>
+    </footer>
+<script src="services.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazingWebtech - Modern Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a14;
+            color: #fff;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 60px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 10, 20, 0.88);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            transition: all 0.35s ease;
+        }
+
+        .navbar.scrolled {
+            height: 65px;
+            background: rgba(10, 10, 20, 0.96);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== LOGO ===== */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #5e5ce7, #558bf7, #5e48ec);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .logo-text {
+            font-size: 23px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            background: linear-gradient(135deg, #55dff7, #4861ec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== NAV LINKS ===== */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            list-style: none;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: #9898b0;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links > li > a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links > li > a.active {
+            color: #fff;
+            background: rgba(168, 85, 247, 0.12);
+        }
+
+        .nav-links > li > a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 3px;
+            background: linear-gradient(135deg, #559ef7, #48d1ec);
+            border-radius: 10px;
+        }
+
+        /* ===== SERVICES DROPDOWN (MEGA MENU) ===== */
+        .services-dropdown {
+            position: relative;
+        }
+
+        .services-dropdown > a i {
+            font-size: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .services-dropdown:hover > a i {
+            transform: rotate(180deg);
+        }
+
+        .services-dropdown:hover > a {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* ===== MEGA MENU ===== */
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 820px;
+            background: rgba(18, 18, 35, 0.98);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            padding: 28px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5),
+                        0 0 0 1px rgba(255, 255, 255, 0.03);
+            z-index: 1002;
+        }
+
+        .services-dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background: rgba(18, 18, 35, 0.98);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            border-left: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+        }
+
+        .mega-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .mega-menu-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.3px;
+        }
+
+        .mega-menu-header h3 i {
+            margin-right: 8px;
+            background: linear-gradient(135deg, #555df7, #487cec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .view-all-link {
+            font-size: 13px;
+            color: #556df7;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .view-all-link:hover {
+            color: #84aefc;
+            gap: 10px;
+        }
+
+        /* ===== SERVICE GRID ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.06), rgba(236, 72, 153, 0.03));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 14px;
+        }
+
+        .service-item:hover::before {
+            opacity: 1;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-2px);
+        }
+
+        .service-item:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-info {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-info h4 {
+            font-size: 13.5px;
+            font-weight: 650;
+            color: #e0e0ef;
+            margin-bottom: 3px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .service-item:hover .service-info h4 {
+            color: #fff;
+        }
+
+        .service-info p {
+            font-size: 11.5px;
+            color: #5a5a72;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        /* ===== SERVICE ICON COLORS ===== */
+        .icon-webdev { background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.1)); color: #60a5fa; }
+        .icon-uiux { background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(139, 92, 246, 0.1)); color: #60a5fa; }
+        .icon-branding { background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(244, 114, 182, 0.1)); color: #60a5fa; }
+        .icon-seo { background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(74, 222, 128, 0.1)); color: #60a5fa; }
+        .icon-marketing { background: linear-gradient(135deg, rgba(251, 146, 60, 0.15), rgba(249, 115, 22, 0.1)); color: #60a5fa; }
+        .icon-geo { background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(56, 189, 248, 0.1)); color: #60a5fa; }
+        .icon-aeo { background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(129, 140, 248, 0.1)); color: #60a5fa; }
+        .icon-printing { background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(248, 113, 113, 0.1)); color: #60a5fa; }
+        .icon-hosting { background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(45, 212, 191, 0.1)); color: #60a5fa; }
+        .icon-email { background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(252, 211, 77, 0.1)); color: #60a5fa; }
+        .icon-content { background: linear-gradient(135deg, rgba(232, 121, 249, 0.15), rgba(217, 70, 239, 0.1)); color: #60a5fa; }
+        .icon-video { background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(251, 113, 133, 0.1)); color: #60a5fa; }
+
+        /* ===== RIGHT SECTION ===== */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 10px 16px;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus-within {
+            border-color: rgba(168, 85, 247, 0.4);
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 24px rgba(168, 85, 247, 0.08);
+        }
+
+        .search-box i { color: #5a5a72; font-size: 14px; }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+            width: 140px;
+        }
+
+        .search-box input::placeholder { color: #3e3e55; }
+
+        .btn-primary {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #6c5ce7, #a855f7);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(168, 85, 247, 0.5);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1002;
+            padding: 10px;
+            border-radius: 12px;
+            transition: background 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2.5px;
+            background: #fff;
+            border-radius: 10px;
+            transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            transform-origin: center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5.5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5.5px);
+        }
+
+        /* ===== MOBILE OVERLAY ===== */
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-overlay.active {
+            opacity: 1;
+        }
+
+        /* ===== MOBILE SEARCH (hidden on desktop) ===== */
+        .mobile-search {
+            display: none;
+        }
+
+        /* ===== MOBILE CTA (hidden on desktop) ===== */
+        .mobile-cta {
+            display: none;
+        }
+
+        /* ===== MOBILE MENU HEADER (hidden on desktop) ===== */
+        .mobile-menu-header {
+            display: none;
+        }
+
+        /* ===== MOBILE SOCIAL (hidden on desktop) ===== */
+        .mobile-social {
+            display: none;
+        }
+
+    
+
+        /* ==========================================================
+           =================== RESPONSIVE DESIGN ====================
+           ========================================================== */
+
+        /* ===== TABLET (1024px) ===== */
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 0 30px;
+            }
+            .search-box {
+                display: none;
+            }
+            .mega-menu {
+                width: 680px;
+                left: 0;
+                transform: translateX(-20%) translateY(10px);
+            }
+            .services-dropdown:hover .mega-menu {
+                transform: translateX(-20%) translateY(0);
+            }
+        }
+
+        /* ===== MOBILE (768px) ===== */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 20px;
+                height: 70px;
+            }
+
+            .navbar.scrolled {
+                height: 60px;
+            }
+
+            /* Hide desktop search */
+            .search-box {
+                display: none !important;
+            }
+
+            /* Show hamburger */
+            .hamburger {
+                display: flex;
+            }
+
+            /* Show overlay */
+            .mobile-overlay {
+                display: block;
+            }
+
+            /* Hide desktop get started button */
+            .nav-right .btn-primary {
+                display: none;
+            }
+
+            /* ===== MOBILE SLIDE-IN MENU ===== */
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 320px;
+                max-width: 88vw;
+                height: 100vh;
+                height: 100dvh;
+                background: linear-gradient(180deg, #0c0c1d 0%, #0a0a18 100%);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                gap: 0;
+                transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                border-left: 1px solid rgba(255, 255, 255, 0.06);
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            /* ===== MOBILE MENU HEADER ===== */
+            .mobile-menu-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 24px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                flex-shrink: 0;
+            }
+
+            .mobile-menu-header .mobile-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+            }
+
+            .mobile-menu-header .mobile-logo-icon {
+                width: 36px;
+                height: 36px;
+                background: linear-gradient(135deg, #6c5ce7, #558bf7);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .mobile-menu-header .mobile-logo-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .mobile-menu-header .mobile-logo-text {
+                font-size: 18px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .mobile-menu-header .mobile-logo-text span {
+                background: linear-gradient(135deg, #55dff7, #484bec);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .mobile-close-btn {
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                color: #9898b0;
+                font-size: 14px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-close-btn:hover {
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+            }
+
+            /* ===== MOBILE SEARCH ===== */
+            .mobile-search {
+                display: block;
+                padding: 16px 24px 8px;
+                flex-shrink: 0;
+            }
+
+            .mobile-search-box {
+                display: flex;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.07);
+                border-radius: 14px;
+                padding: 12px 16px;
+                gap: 12px;
+                transition: all 0.3s ease;
+            }
+
+            .mobile-search-box:focus-within {
+                border-color: rgba(168, 85, 247, 0.35);
+                background: rgba(255, 255, 255, 0.06);
+            }
+
+            .mobile-search-box i {
+                color: #4a4a60;
+                font-size: 15px;
+                flex-shrink: 0;
+            }
+
+            .mobile-search-box input {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 15px;
+                width: 100%;
+            }
+
+            .mobile-search-box input::placeholder {
+                color: #3a3a50;
+            }
+
+            /* ===== MOBILE NAV LABEL ===== */
+            .mobile-nav-label {
+                display: block;
+                font-size: 10.5px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: #3e3e55;
+                padding: 20px 24px 8px;
+                font-weight: 700;
+            }
+
+            /* ===== MOBILE NAV ITEMS ===== */
+            .nav-links > li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            }
+
+            .nav-links > li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links > li > a {
+                display: flex;
+                width: 100%;
+                padding: 16px 24px;
+                font-size: 15.5px;
+                font-weight: 500;
+                border-radius: 0;
+                color: #b0b0c8;
+                transition: all 0.25s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .nav-links > li > a:hover,
+            .nav-links > li > a:active {
+                background: rgba(255, 255, 255, 0.03);
+                color: #fff;
+            }
+
+            .nav-links > li > a.active {
+                color: #fff;
+                background: rgba(168, 85, 247, 0.08);
+                border-radius: 0;
+            }
+
+            .nav-links > li > a.active::after {
+                display: none;
+            }
+
+            .nav-links > li > a i.fa-chevron-down {
+                margin-left: auto;
+                font-size: 12px;
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                color: #5a5a72;
+            }
+
+            /* ===== MOBILE MEGA MENU ===== */
+            .mega-menu {
+                position: static;
+                transform: none !important;
+                width: 100%;
+                opacity: 1;
+                visibility: hidden;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.015);
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.04);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                            padding 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                            visibility 0.45s ease;
+                border-radius: 0;
+            }
+
+            .mega-menu::before {
+                display: none;
+            }
+
+            .services-dropdown:hover .mega-menu {
+                opacity: 1;
+                visibility: hidden;
+                max-height: 0;
+                transform: none !important;
+            }
+
+            .services-dropdown.mobile-open .mega-menu {
+                visibility: visible;
+                max-height: 1200px;
+                padding: 12px 0;
+            }
+
+            .services-dropdown.mobile-open > a i.fa-chevron-down {
+                transform: rotate(180deg);
+                color: #55a6f7;
+            }
+
+            .services-dropdown.mobile-open > a {
+                color: #fff;
+                background: rgba(168, 85, 247, 0.08);
+            }
+
+            .mega-menu-header {
+                padding: 8px 24px 14px;
+                margin-bottom: 6px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            }
+
+            .mega-menu-header h3 {
+                font-size: 13px;
+                color: #8080a0;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+            }
+
+            .view-all-link {
+                font-size: 12px;
+            }
+
+            /* ===== MOBILE SERVICES GRID ===== */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+                padding: 0;
+            }
+
+            .service-item {
+                padding: 13px 24px;
+                border-radius: 0;
+                gap: 14px;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .service-item::before {
+                border-radius: 0;
+            }
+
+            .service-item:hover {
+                transform: none;
+            }
+
+            .service-item:active {
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            .service-icon {
+                width: 38px;
+                height: 38px;
+                border-radius: 10px;
+                font-size: 15px;
+            }
+
+            .service-info h4 {
+                font-size: 13.5px;
+            }
+
+            .service-info p {
+                font-size: 11px;
+            }
+
+            /* ===== MOBILE CTA SECTION ===== */
+            .mobile-cta {
+                display: block;
+                padding: 20px 24px;
+                flex-shrink: 0;
+            }
+
+            .mobile-cta .mobile-cta-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+                padding: 15px 24px;
+                background: linear-gradient(135deg, #6c5ce7, #5573f7);
+                color: #fff;
+                border: none;
+                border-radius: 14px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 6px 24px rgba(168, 85, 247, 0.3);
+                text-decoration: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-cta .mobile-cta-btn:active {
+                transform: scale(0.98);
+            }
+
+            .mobile-cta .mobile-contact-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+                padding: 14px 24px;
+                background: rgba(255, 255, 255, 0.04);
+                color: #b0b0c8;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 14px;
+                font-size: 14.5px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 10px;
+                text-decoration: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-cta .mobile-contact-btn:active {
+                background: rgba(255, 255, 255, 0.06);
+                color: #fff;
+            }
+
+            /* ===== MOBILE SOCIAL LINKS ===== */
+            .mobile-social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                padding: 16px 24px 30px;
+                flex-shrink: 0;
+            }
+
+            .mobile-social a {
+                width: 40px;
+                height: 40px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #6a6a82;
+                font-size: 16px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-social a:active {
+                background: rgba(168, 85, 247, 0.15);
+                color: #a855f7;
+                border-color: rgba(168, 85, 247, 0.2);
+            }
+
+            /* ===== MOBILE DIVIDER ===== */
+            .mobile-divider {
+                height: 1px;
+                background: rgba(255, 255, 255, 0.04);
+                margin: 4px 24px;
+            }
+        }
+
+        /* ===== SMALL MOBILE (480px) ===== */
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0 14px;
+                height: 64px;
+            }
+
+            .navbar.scrolled {
+                height: 56px;
+            }
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                width: 100%;
+                max-width: 100%;
+                border-left: none;
+            }
+
+            .hamburger {
+                padding: 8px;
+            }
+
+            .hamburger span {
+                width: 20px;
+                height: 2px;
+            }
+        }
+
+        /* ===== SCROLLBAR ===== */
+        .nav-links::-webkit-scrollbar {
+            width: 3px;
+        }
+        .nav-links::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .nav-links::-webkit-scrollbar-thumb {
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Hide elements only visible on mobile in desktop */
+        .mobile-nav-label {
+            display: none;
+        }
+
+        /* ===== SAFE AREA (for notched phones) ===== */
+        @supports (padding-bottom: env(safe-area-inset-bottom)) {
+            @media (max-width: 768px) {
+                .mobile-social {
+                    padding-bottom: calc(30px + env(safe-area-inset-bottom));
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="img/logo-dark.png" alt="Logo">
+            </div>
+            <div class="logo-text">Amazing<span>Webtech</span></div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+
+            <!-- Mobile Menu Header -->
+            <li class="mobile-menu-header" style="list-style:none;">
+                <a href="#" class="mobile-logo">
+                    <div class="mobile-logo-icon">
+                        <img src="img/logo-dark.png" alt="Logo">
+                    </div>
+                    <div class="mobile-logo-text">Amazing<span>Webtech</span></div>
+                </a>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+
+            <!-- Mobile Search -->
+            <li class="mobile-search" style="list-style:none;">
+                <div class="mobile-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+            </li>
+
+            <!-- Nav Label -->
+            <li class="mobile-nav-label" style="list-style:none;">Menu</li>
+
+            <li><a href="#" class="active"><i class="fas fa-home" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Home</a></li>
+
+            <!-- ===== SERVICES MEGA DROPDOWN ===== -->
+            <li class="services-dropdown" id="servicesDropdown">
+                <a href="#" id="servicesToggle">
+                    <i class="fas fa-th-large" style="margin-right:10px; font-size:14px; opacity:0.6;"></i>
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="mega-menu">
+                    <div class="mega-menu-header">
+                        <h3><i class="fas fa-th-large"></i> Our Services</h3>
+                        <a href="#" class="view-all-link">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-grid">
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-webdev"><i class="fas fa-laptop-code"></i></div>
+                            <div class="service-info">
+                                <h4>Web & Mobile App Dev</h4>
+                                <p>Responsive websites & native apps</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-uiux"><i class="fas fa-pencil-ruler"></i></div>
+                            <div class="service-info">
+                                <h4>UI/UX Design</h4>
+                                <p>Intuitive user experiences</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-branding"><i class="fas fa-palette"></i></div>
+                            <div class="service-info">
+                                <h4>Branding & Corporate</h4>
+                                <p>Logo, identity & brand strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-seo"><i class="fas fa-search"></i></div>
+                            <div class="service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Rank higher on search engines</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <div class="service-info">
+                                <h4>Digital Marketing</h4>
+                                <p>Social media, PPC & campaigns</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-geo"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="service-info">
+                                <h4>GEO Services</h4>
+                                <p>Generative engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-aeo"><i class="fas fa-robot"></i></div>
+                            <div class="service-info">
+                                <h4>AEO Services</h4>
+                                <p>Answer engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-printing"><i class="fas fa-print"></i></div>
+                            <div class="service-info">
+                                <h4>Printing Services</h4>
+                                <p>Business cards, flyers & more</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-hosting"><i class="fas fa-server"></i></div>
+                            <div class="service-info">
+                                <h4>Web Hosting</h4>
+                                <p>Fast, secure & reliable hosting</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-email"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="service-info">
+                                <h4>Professional Email</h4>
+                                <p>Custom domain email solutions</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-content"><i class="fas fa-feather-alt"></i></div>
+                            <div class="service-info">
+                                <h4>Content Creation</h4>
+                                <p>Blogs, copywriting & strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-video"><i class="fas fa-video"></i></div>
+                            <div class="service-info">
+                                <h4>2D/3D Video Production</h4>
+                                <p>Animation, motion & explainers</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fas fa-info-circle" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Contact</a></li>
+
+            <!-- Mobile Divider -->
+            <li class="mobile-divider" style="list-style:none;"></li>
+
+            <!-- Mobile CTA Buttons -->
+            <li class="mobile-cta" style="list-style:none;">
+                <a href="#" class="mobile-cta-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#" class="mobile-contact-btn">
+                    <i class="fas fa-phone"></i> Book a Free Call
+                </a>
+            </li>
+
+            <!-- Mobile Social Links -->
+            <li class="mobile-social" style="list-style:none;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <a href="#" class="btn-primary">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <script>
+        // ===== ELEMENTS =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const navbar = document.getElementById('navbar');
+        const servicesDropdown = document.getElementById('servicesDropdown');
+        const servicesToggle = document.getElementById('servicesToggle');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+        // ===== OPEN MOBILE MENU =====
+        function openMenu() {
+            hamburger.classList.add('active');
+            navLinks.classList.add('active');
+            mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // ===== CLOSE MOBILE MENU =====
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Also close services dropdown
+            servicesDropdown.classList.remove('mobile-open');
+        }
+
+        // ===== HAMBURGER TOGGLE =====
+        hamburger.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // ===== CLOSE BUTTON =====
+        mobileCloseBtn.addEventListener('click', closeMenu);
+
+        // ===== CLOSE ON OVERLAY CLICK =====
+        mobileOverlay.addEventListener('click', closeMenu);
+
+        // ===== SERVICES TOGGLE (Mobile) =====
+        servicesToggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                servicesDropdown.classList.toggle('mobile-open');
+            }
+        });
+
+        // ===== CLOSE MENU ON NAV LINK CLICK =====
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Don't close for services toggle
+                if (link === servicesToggle) return;
+                // Don't close for view all or mobile logo
+                if (link.classList.contains('view-all-link')) return;
+                if (link.classList.contains('mobile-logo')) return;
+
+                if (window.innerWidth <= 768) {
+                    closeMenu();
+                }
+            });
+        });
+
+        // ===== SCROLL EFFECT =====
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            navbar.classList.toggle('scrolled', currentScroll > 50);
+            lastScroll = currentScroll;
+        });
+
+        // ===== CLOSE MOBILE MENU ON RESIZE TO DESKTOP =====
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        // ===== CLOSE MEGA MENU ON OUTSIDE CLICK (Mobile) =====
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth > 768) return;
+            if (!servicesDropdown.contains(e.target)) {
+                servicesDropdown.classList.remove('mobile-open');
+            }
+        });
+
+        // ===== PREVENT BODY SCROLL WHEN MENU OPEN (iOS fix) =====
+        navLinks.addEventListener('touchmove', (e) => {
+            if (navLinks.scrollHeight <= navLinks.clientHeight) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // ===== ESCAPE KEY TO CLOSE =====
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
+
+</body>
+</html>

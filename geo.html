@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GEO - Generative Engine Optimization - Amazing WebTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+<nav class="navbar" id="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="img/logo-dark.png" alt="Logo">
+            </div>
+            <div class="logo-text">Amazing<span>Webtech</span></div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+
+            <!-- Mobile Menu Header -->
+            <li class="mobile-menu-header" style="list-style:none;">
+                <a href="#" class="mobile-logo">
+                    <div class="mobile-logo-icon">
+                        <img src="img/logo-dark.png" alt="Logo">
+                    </div>
+                    <div class="mobile-logo-text">Amazing<span>Webtech</span></div>
+                </a>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+
+            <!-- Mobile Search -->
+            <li class="mobile-search" style="list-style:none;">
+                <div class="mobile-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+            </li>
+
+            <!-- Nav Label -->
+            <li class="mobile-nav-label" style="list-style:none;">Menu</li>
+
+            <li><a href="#" class="active"><i class="fas fa-home" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Home</a></li>
+
+            <!-- ===== SERVICES MEGA DROPDOWN ===== -->
+            <li class="services-dropdown" id="servicesDropdown">
+                <a href="#" id="servicesToggle">
+                    <i class="fas fa-th-large" style="margin-right:10px; font-size:14px; opacity:0.6;"></i>
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="mega-menu">
+                    <div class="mega-menu-header">
+                        <h3><i class="fas fa-th-large"></i> Our Services</h3>
+                        <a href="#" class="view-all-link">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-grid">
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-webdev"><i class="fas fa-laptop-code"></i></div>
+                            <div class="service-info">
+                                <h4>Web & Mobile App Dev</h4>
+                                <p>Responsive websites & native apps</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-uiux"><i class="fas fa-pencil-ruler"></i></div>
+                            <div class="service-info">
+                                <h4>UI/UX Design</h4>
+                                <p>Intuitive user experiences</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-branding"><i class="fas fa-palette"></i></div>
+                            <div class="service-info">
+                                <h4>Branding & Corporate</h4>
+                                <p>Logo, identity & brand strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-seo"><i class="fas fa-search"></i></div>
+                            <div class="service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Rank higher on search engines</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <div class="service-info">
+                                <h4>Digital Marketing</h4>
+                                <p>Social media, PPC & campaigns</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-geo"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="service-info">
+                                <h4>GEO Services</h4>
+                                <p>Generative engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-aeo"><i class="fas fa-robot"></i></div>
+                            <div class="service-info">
+                                <h4>AEO Services</h4>
+                                <p>Answer engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-printing"><i class="fas fa-print"></i></div>
+                            <div class="service-info">
+                                <h4>Printing Services</h4>
+                                <p>Business cards, flyers & more</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-hosting"><i class="fas fa-server"></i></div>
+                            <div class="service-info">
+                                <h4>Web Hosting</h4>
+                                <p>Fast, secure & reliable hosting</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-email"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="service-info">
+                                <h4>Professional Email</h4>
+                                <p>Custom domain email solutions</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-content"><i class="fas fa-feather-alt"></i></div>
+                            <div class="service-info">
+                                <h4>Content Creation</h4>
+                                <p>Blogs, copywriting & strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-video"><i class="fas fa-video"></i></div>
+                            <div class="service-info">
+                                <h4>2D/3D Video Production</h4>
+                                <p>Animation, motion & explainers</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fas fa-info-circle" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Contact</a></li>
+
+            <!-- Mobile Divider -->
+            <li class="mobile-divider" style="list-style:none;"></li>
+
+            <!-- Mobile CTA Buttons -->
+            <li class="mobile-cta" style="list-style:none;">
+                <a href="#" class="mobile-cta-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#" class="mobile-contact-btn">
+                    <i class="fas fa-phone"></i> Book a Free Call
+                </a>
+            </li>
+
+            <!-- Mobile Social Links -->
+            <li class="mobile-social" style="list-style:none;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <a href="#" class="btn-primary">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Hero Section -->
+<section class="service-hero">
+    <div class="hero-content">
+        <div class="hero-icon-wrap">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="hero-label">
+            <i class="fas fa-star"></i> Amazing WebTech
+        </div>
+        <h1 class="hero-title">
+            <span class="line1">Generative Engine</span>
+            <span class="line2">Optimization</span>
+        </h1>
+        <p class="hero-desc">Dominate AI-generated search results. Optimize your content for ChatGPT, Google SGE, Perplexity, Claude, and other generative AI platforms to ensure your brand is recommended, cited, and trusted by AI systems.</p>
+        <div class="hero-badges">
+            <span class="hero-badge"><i class="fas fa-robot"></i> AI Citations</span>
+            <span class="hero-badge"><i class="fas fa-wand-magic-sparkles"></i> LLM Optimization</span>
+            <span class="hero-badge"><i class="fas fa-link"></i> Source Authority</span>
+            <span class="hero-badge"><i class="fas fa-database"></i> Knowledge Graphs</span>
+        </div>
+        <div class="hero-btns">
+            <a href="contact.html" class="btn-hero-primary"><i class="fas fa-rocket"></i> Get AI Visibility</a>
+            <a href="#overview" class="btn-hero-outline"><i class="fas fa-eye"></i> Learn About GEO</a>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="section section-dark2" id="overview">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-left">
+                <div class="overview-label"><i class="fas fa-brain"></i> GEO Specialists</div>
+                <h2 class="overview-title">Be the Source <span>AI Trusts</span></h2>
+                <p class="overview-desc">Generative Engine Optimization (GEO) is the evolution of search optimization. As users shift from traditional search to AI-powered assistants like ChatGPT, Google's AI Overview, and Perplexity, your content must be structured to become the authoritative source these AI systems cite and recommend.</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="fc-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>AI Citations</h4>
+                            <p>Get your brand cited as a trusted source in AI-generated responses</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>Entity Optimization</h4>
+                            <p>Build your brand's entity presence in AI knowledge systems</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>Structured Content</h4>
+                            <p>Create AI-readable content with proper schema and formatting</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="fc-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="fc-body">
+                            <h4>Authority Building</h4>
+                            <p>Establish topical authority that AI systems recognize and trust</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-box">
+                    <div class="benefits-box-title"><i class="fas fa-wand-magic-sparkles"></i> GEO Benefits</div>
+                    <div class="benefits-list">
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>AI Search Visibility</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Brand Recommendations</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Source Citations</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Knowledge Graph Presence</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Future-Proof Strategy</span>
+                        </div>
+                        <div class="benefit-row">
+                            <div class="bi"><i class="fas fa-check"></i></div>
+                            <span>Competitive Advantage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-right">
+                <div class="img-wrap">
+                    <img src="img/geo.jpg" alt="GEO Services" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=380&fit=crop'">
+                </div>
+                <div class="stats-row">
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="40%">0</span>
+                        <span class="stat-lbl">Search Shifting to AI</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="100+">0</span>
+                        <span class="stat-lbl">GEO Projects</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat-cell">
+                        <span class="stat-num" data-count="5x">0</span>
+                        <span class="stat-lbl">AI Visibility Boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="section section-dark3">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-cogs"></i> Our Methodology
+            </div>
+            <h2 class="section-title">GEO <span>Process</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="process-num">01</div>
+                <h4>AI Audit</h4>
+                <p>Analyze how AI systems currently perceive and cite your brand and competitors.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="process-num">02</div>
+                <h4>Entity Mapping</h4>
+                <p>Map your brand's entities, relationships, and knowledge graph presence.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="process-num">03</div>
+                <h4>Content Optimization</h4>
+                <p>Restructure content for AI comprehension with proper schema and formatting.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-chart-network"></i>
+                </div>
+                <div class="process-num">04</div>
+                <h4>Authority Building</h4>
+                <p>Build citations, mentions, and authoritative signals across the web.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Platforms Section -->
+<section class="section section-dark2">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-robot"></i> AI Platforms
+            </div>
+            <h2 class="section-title">Optimize For <span>Every AI</span></h2>
+        </div>
+        <div class="tools-wrap">
+            <span class="tool-chip"><i class="fas fa-comment-dots"></i> ChatGPT</span>
+            <span class="tool-chip"><i class="fab fa-google"></i> Google AI Overview</span>
+            <span class="tool-chip"><i class="fas fa-gem"></i> Google Gemini</span>
+            <span class="tool-chip"><i class="fas fa-search"></i> Perplexity AI</span>
+            <span class="tool-chip"><i class="fas fa-feather"></i> Claude AI</span>
+            <span class="tool-chip"><i class="fab fa-microsoft"></i> Microsoft Copilot</span>
+            <span class="tool-chip"><i class="fas fa-bolt"></i> Bing AI</span>
+            <span class="tool-chip"><i class="fas fa-fire"></i> Meta AI</span>
+            <span class="tool-chip"><i class="fas fa-code"></i> GitHub Copilot</span>
+            <span class="tool-chip"><i class="fas fa-microphone"></i> Voice Assistants</span>
+            <span class="tool-chip"><i class="fas fa-brain"></i> Llama</span>
+            <span class="tool-chip"><i class="fas fa-star"></i> Mistral AI</span>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services Section -->
+<section class="section section-dark3">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-layer-group"></i> Core Services
+            </div>
+            <h2 class="section-title">GEO <span>Services</span></h2>
+        </div>
+        <div class="related-grid">
+            <div class="related-card">
+                <div class="related-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Entity SEO</h3>
+                <p>Build your brand's entity presence in knowledge graphs and AI training data for better recognition.</p>
+                <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Wikipedia & Wikidata Presence</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Knowledge Panel Optimization</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Entity Relationship Mapping</li>
+                    <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Brand Entity Verification</li>
+                </ul>
+                <a href="contact.html" class="related-link">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="related-card" style="border-color: var(--primary); transform: scale(1.02);">
+                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">MOST IMPORTANT</div>
+                <div class="related-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>AI Content Optimization</h3>
+                <p>Structure your content to be easily understood, cited, and recommended by AI language models.</p>
+                <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> LLM-Friendly Formatting</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Structured Data Implementation</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Fact-Based Content Creation</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Citation-Worthy Resources</li>
+                    <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> E-E-A-T Signals</li>
+                </ul>
+                <a href="contact.html" class="related-link">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="related-card">
+                <div class="related-icon"><i class="fas fa-link"></i></div>
+                <h3>Authority & Citations</h3>
+                <p>Build the authoritative signals that make AI systems trust and recommend your brand.</p>
+                <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Digital PR & Mentions</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Expert Positioning</li>
+                    <li style="margin-bottom: 0.4rem;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Authoritative Backlinks</li>
+                    <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Industry Recognition</li>
+                </ul>
+                <a href="contact.html" class="related-link">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GEO vs SEO Section -->
+<section class="section section-dark2">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-balance-scale"></i> Understanding
+            </div>
+            <h2 class="section-title">GEO vs <span>Traditional SEO</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="process-num" style="font-size: 0.9rem; color: var(--text-muted);">SEO</div>
+                <h4>Ranking Focus</h4>
+                <p>Traditional SEO aims to rank high in search engine results pages (SERPs).</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon" style="background: var(--gradient-secondary);">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="process-num" style="font-size: 0.9rem; color: var(--secondary);">GEO</div>
+                <h4>Citation Focus</h4>
+                <p>GEO aims to be cited and recommended within AI-generated responses.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-mouse-pointer"></i>
+                </div>
+                <div class="process-num" style="font-size: 0.9rem; color: var(--text-muted);">SEO</div>
+                <h4>Click-Based Traffic</h4>
+                <p>Users click through to your website from search results.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon" style="background: var(--gradient-secondary);">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="process-num" style="font-size: 0.9rem; color: var(--secondary);">GEO</div>
+                <h4>Direct Answers</h4>
+                <p>Your brand becomes the recommended solution within AI conversations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Elements Section -->
+<section class="section section-dark3">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-code"></i> Technical Elements
+            </div>
+            <h2 class="section-title">GEO <span>Components</span></h2>
+        </div>
+        <div class="tools-wrap">
+            <span class="tool-chip"><i class="fas fa-code"></i> Schema Markup</span>
+            <span class="tool-chip"><i class="fas fa-sitemap"></i> Knowledge Graphs</span>
+            <span class="tool-chip"><i class="fas fa-link"></i> Entity Linking</span>
+            <span class="tool-chip"><i class="fas fa-file-alt"></i> Structured Data</span>
+            <span class="tool-chip"><i class="fas fa-robot"></i> AI Training Signals</span>
+            <span class="tool-chip"><i class="fas fa-certificate"></i> E-E-A-T Optimization</span>
+            <span class="tool-chip"><i class="fas fa-quote-right"></i> Citation Building</span>
+            <span class="tool-chip"><i class="fas fa-check-double"></i> Fact Verification</span>
+            <span class="tool-chip"><i class="fas fa-globe"></i> Semantic Web</span>
+            <span class="tool-chip"><i class="fas fa-database"></i> Wikidata Integration</span>
+        </div>
+    </div>
+</section>
+
+<!-- Why GEO Matters Section -->
+<section class="section section-dark2">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-exclamation-circle"></i> Why It Matters
+            </div>
+            <h2 class="section-title">The Future of <span>Search</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="process-num" style="font-size: 1.5rem; color: var(--secondary);">40%</div>
+                <h4>AI Search Growth</h4>
+                <p>Of searches will be AI-assisted by 2025, fundamentally changing discovery.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="process-num" style="font-size: 1.5rem; color: var(--secondary);">100M+</div>
+                <h4>ChatGPT Users</h4>
+                <p>Weekly active users relying on AI for information and recommendations.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="process-num" style="font-size: 1.5rem; color: var(--secondary);">80%</div>
+                <h4>Enterprise Adoption</h4>
+                <p>Of enterprises will integrate generative AI by 2026 for customer interactions.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="process-num" style="font-size: 1.5rem; color: var(--secondary);">1st</div>
+                <h4>Mover Advantage</h4>
+                <p>Brands optimizing now will dominate AI recommendations for years.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label">
+                <i class="fas fa-question-circle"></i> FAQ
+            </div>
+            <h2 class="section-title">GEO <span>Questions</span></h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>What exactly is Generative Engine Optimization (GEO)?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">GEO is the practice of optimizing your online presence to be recognized, cited, and recommended by AI-powered search engines and language models like ChatGPT, Google's AI Overview, Perplexity, and Claude. Unlike traditional SEO which focuses on ranking in search results, GEO ensures your brand becomes the trusted source that AI systems reference when answering user queries.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>How is GEO different from AEO (Answer Engine Optimization)?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">While both focus on AI, AEO primarily targets featured snippets, voice search, and direct answers in traditional search. GEO goes further by optimizing for generative AI systems that create comprehensive responses. GEO focuses on entity building, knowledge graph presence, and ensuring AI language models understand and trust your brand as an authoritative source across all AI platforms.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>Do I still need SEO if I invest in GEO?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Yes! SEO and GEO work together synergistically. Strong SEO provides the foundation of quality content and authority signals that AI systems use to determine trustworthiness. GEO then ensures this content is structured and positioned to be cited by AI. We recommend a combined SEO + GEO strategy for maximum visibility across both traditional and AI-powered search.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>How do you measure GEO success?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">We track multiple GEO-specific metrics including: AI citation frequency (how often your brand is mentioned in AI responses), knowledge panel presence, entity recognition tests across AI platforms, brand mention sentiment in AI outputs, referral traffic from AI platforms, and comparative analysis against competitors in AI responses.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>How long does it take to see GEO results?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">GEO is a long-term strategy. Initial improvements in AI visibility can be seen within 2-3 months, but significant results typically appear in 4-6 months. Building strong entity presence and authority takes time as AI systems need to crawl, process, and trust your content. However, early investment provides lasting competitive advantage as AI adoption accelerates.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">
+                    <span>Can you guarantee my brand will appear in ChatGPT responses?</span>
+                    <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">No ethical agency can guarantee specific AI responses, as AI systems are constantly evolving and responses vary based on context. However, we significantly increase your probability of being cited by building the trust signals, entity presence, and content structure that AI systems prefer. Our strategies are based on research into how LLMs source and prioritize information.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-band">
+    <div class="cta-band-inner">
+        <h2>Ready for the AI Search Revolution?</h2>
+        <p>Don't get left behind. Position your brand to dominate AI-powered search before your competitors do.</p>
+        <div class="cta-band-btns">
+            <a href="contact.html" class="btn-primary-grad">
+                <i class="fas fa-brain"></i> Get GEO Strategy
+            </a>
+            <a href="tel:+919099014070" class="btn-outline-white">
+                <i class="fas fa-phone"></i> Call Us Now
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Related Services -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-label"><i class="fas fa-th"></i> Related</div>
+            <h2 class="section-title">Related <span>Services</span></h2>
+        </div>
+        <div class="related-grid">
+            <div class="related-card">
+                <div class="related-icon"><i class="fas fa-microphone"></i></div>
+                <h3>AEO Services</h3>
+                <p>Answer Engine Optimization for voice search and featured snippets.</p>
+                <a href="aeo.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="related-card">
+                <div class="related-icon"><i class="fas fa-search"></i></div>
+                <h3>SEO Services</h3>
+                <p>Traditional search engine optimization that supports your GEO strategy.</p>
+                <a href="seo.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="related-card">
+                <div class="related-icon"><i class="fas fa-pencil-alt"></i></div>
+                <h3>Content Creation</h3>
+                <p>AI-optimized content that gets cited and recommended by AI systems.</p>
+                <a href="contentcreation.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="img/logo-dark.png" height="50px" width="50px">
+                <p>Pioneering Generative Engine Optimization to help brands dominate the AI-powered future of search.</p>
+                <div class="footer-socials">
+                    <a href="#" class="soc-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="soc-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>AI Optimization</h4>
+                <ul>
+                    <li><a href="geo.html">GEO</a></li>
+                    <li><a href="aeo.html">AEO</a></li>
+                    <li><a href="seo.html">SEO</a></li>
+                    <li><a href="contentcreation.html">Content Creation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>AI Search Insights</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Get the latest on AI search trends and GEO strategies.</p>
+                <div class="newsletter-wrap">
+                    <input type="email" placeholder="Your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2021 Amazing WebTech · Made with <i class="fas fa-heart"></i> for the AI future.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="services.js"></script>
+</body>
+</html>

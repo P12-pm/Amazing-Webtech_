@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mobile App Development - Amazing WebTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="services.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="img/logo-dark.png" alt="Logo">
+            </div>
+            <div class="logo-text">Amazing<span>Webtech</span></div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+
+            <!-- Mobile Menu Header -->
+            <li class="mobile-menu-header" style="list-style:none;">
+                <a href="#" class="mobile-logo">
+                    <div class="mobile-logo-icon">
+                        <img src="img/logo-dark.png" alt="Logo">
+                    </div>
+                    <div class="mobile-logo-text">Amazing<span>Webtech</span></div>
+                </a>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+
+            <!-- Mobile Search -->
+            <li class="mobile-search" style="list-style:none;">
+                <div class="mobile-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+            </li>
+
+            <!-- Nav Label -->
+            <li class="mobile-nav-label" style="list-style:none;">Menu</li>
+
+            <li><a href="#" class="active"><i class="fas fa-home" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Home</a></li>
+
+            <!-- ===== SERVICES MEGA DROPDOWN ===== -->
+            <li class="services-dropdown" id="servicesDropdown">
+                <a href="#" id="servicesToggle">
+                    <i class="fas fa-th-large" style="margin-right:10px; font-size:14px; opacity:0.6;"></i>
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="mega-menu">
+                    <div class="mega-menu-header">
+                        <h3><i class="fas fa-th-large"></i> Our Services</h3>
+                        <a href="#" class="view-all-link">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-grid">
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-webdev"><i class="fas fa-laptop-code"></i></div>
+                            <div class="service-info">
+                                <h4>Web & Mobile App Dev</h4>
+                                <p>Responsive websites & native apps</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-uiux"><i class="fas fa-pencil-ruler"></i></div>
+                            <div class="service-info">
+                                <h4>UI/UX Design</h4>
+                                <p>Intuitive user experiences</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-branding"><i class="fas fa-palette"></i></div>
+                            <div class="service-info">
+                                <h4>Branding & Corporate</h4>
+                                <p>Logo, identity & brand strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-seo"><i class="fas fa-search"></i></div>
+                            <div class="service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Rank higher on search engines</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <div class="service-info">
+                                <h4>Digital Marketing</h4>
+                                <p>Social media, PPC & campaigns</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-geo"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="service-info">
+                                <h4>GEO Services</h4>
+                                <p>Generative engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-aeo"><i class="fas fa-robot"></i></div>
+                            <div class="service-info">
+                                <h4>AEO Services</h4>
+                                <p>Answer engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-printing"><i class="fas fa-print"></i></div>
+                            <div class="service-info">
+                                <h4>Printing Services</h4>
+                                <p>Business cards, flyers & more</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-hosting"><i class="fas fa-server"></i></div>
+                            <div class="service-info">
+                                <h4>Web Hosting</h4>
+                                <p>Fast, secure & reliable hosting</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-email"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="service-info">
+                                <h4>Professional Email</h4>
+                                <p>Custom domain email solutions</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-content"><i class="fas fa-feather-alt"></i></div>
+                            <div class="service-info">
+                                <h4>Content Creation</h4>
+                                <p>Blogs, copywriting & strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-video"><i class="fas fa-video"></i></div>
+                            <div class="service-info">
+                                <h4>2D/3D Video Production</h4>
+                                <p>Animation, motion & explainers</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fas fa-info-circle" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Contact</a></li>
+
+            <!-- Mobile Divider -->
+            <li class="mobile-divider" style="list-style:none;"></li>
+
+            <!-- Mobile CTA Buttons -->
+            <li class="mobile-cta" style="list-style:none;">
+                <a href="#" class="mobile-cta-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#" class="mobile-contact-btn">
+                    <i class="fas fa-phone"></i> Book a Free Call
+                </a>
+            </li>
+
+            <!-- Mobile Social Links -->
+            <li class="mobile-social" style="list-style:none;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <a href="#" class="btn-primary">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+<section class="service-hero">
+  <div class="hero-content">
+    <div class="hero-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
+    <div class="hero-label"><i class="fas fa-star"></i> Amazing WebTech</div>
+    <h1 class="hero-title"><span class="line1">Mobile App</span><span class="line2">Development</span></h1>
+    <p class="hero-desc">Innovative iOS and Android applications crafted with cutting-edge technology, intuitive design, and flawless user experiences that grow your business.</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><i class="fab fa-apple"></i> iOS Apps</span>
+      <span class="hero-badge"><i class="fab fa-android"></i> Android Apps</span>
+      <span class="hero-badge"><i class="fas fa-layer-group"></i> Cross-Platform</span>
+      <span class="hero-badge"><i class="fas fa-vr-cardboard"></i> AR / VR</span>
+    </div>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-hero-primary"><i class="fas fa-rocket"></i> Start App Project</a>
+      <a href="#overview" class="btn-hero-outline"><i class="fas fa-eye"></i> View Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark2" id="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-left">
+        <div class="overview-label"><i class="fas fa-mobile-alt"></i> App Specialists</div>
+        <h2 class="overview-title">Apps That <span>Users Love</span></h2>
+        <p class="overview-desc">From concept to App Store launch, we build powerful mobile applications for iOS and Android. Our apps combine beautiful UI/UX with robust backend architecture to deliver exceptional experiences.</p>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-icon"><i class="fab fa-apple"></i></div><div class="fc-body"><h4>iOS Development</h4><p>Native Swift apps optimised for iPhone & iPad</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fab fa-android"></i></div><div class="fc-body"><h4>Android Development</h4><p>Kotlin/Java apps for the entire Android ecosystem</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-layer-group"></i></div><div class="fc-body"><h4>React Native</h4><p>Cross-platform apps with native performance</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-vr-cardboard"></i></div><div class="fc-body"><h4>AR / VR Apps</h4><p>Immersive augmented and virtual reality experiences</p></div></div>
+        </div>
+        <div class="benefits-box">
+          <div class="benefits-box-title"><i class="fas fa-star"></i> App Benefits</div>
+          <div class="benefits-list">
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>App Store Submission</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Push Notifications</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Offline Functionality</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Payment Integration</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Analytics Dashboard</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Post-Launch Support</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div class="img-wrap"><img src="img/mobile-app.jpg" alt="Mobile App" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=380&fit=crop'"></div>
+        <div class="stats-row">
+          <div class="stat-cell"><span class="stat-num" data-count="200+">0</span><span class="stat-lbl">Apps Delivered</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-num" data-count="5M+">0</span><span class="stat-lbl">Total Downloads</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-num" data-count="4.8★">0</span><span class="stat-lbl">Avg Store Rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark3">
+  <div class="container">
+    <div class="section-head"><div class="section-label"><i class="fas fa-cogs"></i> Process</div><h2 class="section-title">App Development <span>Journey</span></h2></div>
+    <div class="process-grid">
+      <div class="process-card"><div class="process-icon"><i class="fas fa-lightbulb"></i></div><div class="process-num">01</div><h4>Ideation</h4><p>Define your app concept, target audience, and core functionality.</p></div>
+      <div class="process-card"><div class="process-icon"><i class="fas fa-draw-polygon"></i></div><div class="process-num">02</div><h4>Wireframing</h4><p>Create detailed wireframes and interactive prototypes for approval.</p></div>
+      <div class="process-card"><div class="process-icon"><i class="fas fa-laptop-code"></i></div><div class="process-num">03</div><h4>Development</h4><p>Agile development with regular updates and milestone reviews.</p></div>
+      <div class="process-card"><div class="process-icon"><i class="fas fa-store"></i></div><div class="process-num">04</div><h4>App Store Launch</h4><p>Testing, QA, submission and live deployment on app stores.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark2">
+  <div class="container">
+    <div class="section-head"><div class="section-label"><i class="fas fa-tools"></i> Technologies</div><h2 class="section-title">Our <span>Mobile Tech Stack</span></h2></div>
+    <div class="tools-wrap">
+      <span class="tool-chip">Swift / SwiftUI</span>
+      <span class="tool-chip">Kotlin / Java</span>
+      <span class="tool-chip">React Native</span>
+      <span class="tool-chip">Flutter / Dart</span>
+      <span class="tool-chip">Firebase</span>
+      <span class="tool-chip">ARKit / ARCore</span>
+      <span class="tool-chip">GraphQL</span>
+      <span class="tool-chip">REST APIs</span>
+      <span class="tool-chip">Stripe / PayPal</span>
+      <span class="tool-chip">Push Notifications</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+        <div class="section-label">
+            <i class="fas fa-tags"></i> Pricing
+        </div>
+        <h2 class="section-title">App Development <span>Packages</span></h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-badge">Basic</div>
+        <div class="price-name">Simple App</div>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-value">2,499</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+            <li><i class="fas fa-check"></i>Single Platform</li>
+            <li><i class="fas fa-check"></i>Up to 10 Screens</li>
+            <li><i class="fas fa-check"></i>User Auth</li>
+            <li><i class="fas fa-check"></i>Basic Backend</li>
+            <li class="unavailable"><i class="fas fa-times"></i>Payments</li>
+            <li class="unavailable"><i class="fas fa-times"></i>AR Features</li>
+        </ul>
+        <button class="btn-price btn-price-outline" onclick="window.location='contact.html'">Get Started</button>
+    </div>
+      <div class="price-card featured">
+        <div class="price-badge">Pro</div>
+        <div class="price-name">Business App</div>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-value">5,999</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features"><li><i class="fas fa-check"></i>iOS + Android</li>
+            <li><i class="fas fa-check"></i>Unlimited Screens</li>
+            <li><i class="fas fa-check"></i>Payment Gateway</li>
+            <li><i class="fas fa-check"></i>Push Notifications</li>
+            <li><i class="fas fa-check"></i>Analytics</li>
+            <li><i class="fas fa-check"></i>1 Year Support</li>
+        </ul>
+        <button class="btn-price btn-price-primary" onclick="window.location='contact.html'">Get Started</button>
+    </div>
+      <div class="price-card">
+        <div class="price-badge">Enterprise</div>
+        <div class="price-name">Custom App</div>
+        <div class="price-amount"><span class="price-value" style="font-size:2rem;">Custom</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features"><li><i class="fas fa-check"></i>Multi-Platform</li>
+            <li><i class="fas fa-check"></i>AR / VR Features</li>
+            <li><i class="fas fa-check"></i>AI Integration</li>
+            <li><i class="fas fa-check"></i>Custom Backend</li>
+            <li><i class="fas fa-check"></i>Dedicated Team</li>
+            <li><i class="fas fa-check"></i>Ongoing Support</li>
+        </ul>
+        <button class="btn-price btn-price-outline" onclick="window.location='contact.html'">Contact Us</button>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark2">
+  <div class="container">
+    <div class="section-head">
+        <div class="section-label">
+            <i class="fas fa-question-circle"></i> FAQ
+        </div>
+        <h2 class="section-title">Common <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span>How long does it take to develop an app?</span>
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="faq-a">
+            <div class="faq-a-inner">Simple apps take 2-4 months. Medium complexity apps take 4-8 months. Enterprise apps with complex features can take 8-12+ months. We provide detailed timelines after our discovery phase.
+            </div>
+        </div>
+    </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you develop for both iOS and Android?</span>
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="faq-a">
+            <div class="faq-a-inner">Yes! We build native apps for both platforms and cross-platform solutions using React Native or Flutter, which can reduce cost and development time significantly.
+          </div>
+        </div>
+    </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Will you help publish to app stores?</span>
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="faq-a">
+            <div class="faq-a-inner">Absolutely! We handle the complete App Store and Google Play submission process, including all required assets, metadata, and compliance requirements.
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to Build Your Mobile App?</h2>
+    <p>Turn your app idea into reality. Get a free consultation and project estimate today.</p>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn-primary-grad"><i class="fas fa-rocket"></i> Start App Project</a>
+      <a href="tel:+919099014070" class="btn-outline-white"><i class="fas fa-phone"></i> Call Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+        <div class="section-label">
+            <i class="fas fa-th"></i> Explore More
+        </div>
+        <h2 class="section-title">Related <span>Services</span></h2>
+    </div>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="related-icon">
+            <i class="fas fa-palette"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Beautiful, intuitive interfaces designed for maximum user engagement.</p>
+        <a href="uiux.html" class="related-link">Learn More 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+      <div class="related-card">
+        <div class="related-icon">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Full-stack web applications that complement your mobile app perfectly.</p>
+        <a href="websitedesign.html" class="related-link">Learn More 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+      <div class="related-card">
+        <div class="related-icon">
+            <i class="fas fa-film"></i>
+        </div>
+        <h3>2D/3D Animation</h3>
+        <p>Engaging app preview videos and animated onboarding experiences.</p>
+        <a href="2d3dvideo.html" class="related-link">Learn More 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+         <img src="img/logo-dark.png" height="50px" width="50px">
+        <p>We are a web design agency helping businesses of all sizes get a better return from online activities.</p>
+        <div class="footer-socials">
+            <a href="#" class="soc-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="soc-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="websitedesign.html">Web Design</a></li>
+            <li><a href="mobileapp.html">Mobile Apps</a></li>
+            <li><a href="uiux.html">UI/UX Design</a></li>
+            <li><a href="branding.html">Branding</a></li>
+            <li><a href="seo.html">SEO</a></li>
+        </ul>
+    </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <div class="newsletter-wrap">
+            <input type="email" placeholder="Your email">
+            <button>Subscribe</button>
+        </div>
+    </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2021 Amazing WebTech · Made with <i class="fas fa-heart"></i> for great people.</p></div>
+  </div>
+</footer>
+<script src="services.js"></script>
+</body>
+</html>

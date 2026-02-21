@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>UI/UX Design - Amazing WebTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="services.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="img/logo-dark.png" alt="Logo">
+            </div>
+            <div class="logo-text">Amazing<span>Webtech</span></div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+
+            <!-- Mobile Menu Header -->
+            <li class="mobile-menu-header" style="list-style:none;">
+                <a href="#" class="mobile-logo">
+                    <div class="mobile-logo-icon">
+                        <img src="img/logo-dark.png" alt="Logo">
+                    </div>
+                    <div class="mobile-logo-text">Amazing<span>Webtech</span></div>
+                </a>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+
+            <!-- Mobile Search -->
+            <li class="mobile-search" style="list-style:none;">
+                <div class="mobile-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search services...">
+                </div>
+            </li>
+
+            <!-- Nav Label -->
+            <li class="mobile-nav-label" style="list-style:none;">Menu</li>
+
+            <li><a href="#" class="active"><i class="fas fa-home" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Home</a></li>
+
+            <!-- ===== SERVICES MEGA DROPDOWN ===== -->
+            <li class="services-dropdown" id="servicesDropdown">
+                <a href="#" id="servicesToggle">
+                    <i class="fas fa-th-large" style="margin-right:10px; font-size:14px; opacity:0.6;"></i>
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="mega-menu">
+                    <div class="mega-menu-header">
+                        <h3><i class="fas fa-th-large"></i> Our Services</h3>
+                        <a href="#" class="view-all-link">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-grid">
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-webdev"><i class="fas fa-laptop-code"></i></div>
+                            <div class="service-info">
+                                <h4>Web & Mobile App Dev</h4>
+                                <p>Responsive websites & native apps</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-uiux"><i class="fas fa-pencil-ruler"></i></div>
+                            <div class="service-info">
+                                <h4>UI/UX Design</h4>
+                                <p>Intuitive user experiences</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-branding"><i class="fas fa-palette"></i></div>
+                            <div class="service-info">
+                                <h4>Branding & Corporate</h4>
+                                <p>Logo, identity & brand strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-seo"><i class="fas fa-search"></i></div>
+                            <div class="service-info">
+                                <h4>SEO Optimization</h4>
+                                <p>Rank higher on search engines</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <div class="service-info">
+                                <h4>Digital Marketing</h4>
+                                <p>Social media, PPC & campaigns</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-geo"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="service-info">
+                                <h4>GEO Services</h4>
+                                <p>Generative engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-aeo"><i class="fas fa-robot"></i></div>
+                            <div class="service-info">
+                                <h4>AEO Services</h4>
+                                <p>Answer engine optimization</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-printing"><i class="fas fa-print"></i></div>
+                            <div class="service-info">
+                                <h4>Printing Services</h4>
+                                <p>Business cards, flyers & more</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-hosting"><i class="fas fa-server"></i></div>
+                            <div class="service-info">
+                                <h4>Web Hosting</h4>
+                                <p>Fast, secure & reliable hosting</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-email"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="service-info">
+                                <h4>Professional Email</h4>
+                                <p>Custom domain email solutions</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-content"><i class="fas fa-feather-alt"></i></div>
+                            <div class="service-info">
+                                <h4>Content Creation</h4>
+                                <p>Blogs, copywriting & strategy</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="service-item">
+                            <div class="service-icon icon-video"><i class="fas fa-video"></i></div>
+                            <div class="service-info">
+                                <h4>2D/3D Video Production</h4>
+                                <p>Animation, motion & explainers</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fas fa-info-circle" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="margin-right:10px; font-size:14px; opacity:0.6;"></i> Contact</a></li>
+
+            <!-- Mobile Divider -->
+            <li class="mobile-divider" style="list-style:none;"></li>
+
+            <!-- Mobile CTA Buttons -->
+            <li class="mobile-cta" style="list-style:none;">
+                <a href="#" class="mobile-cta-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#" class="mobile-contact-btn">
+                    <i class="fas fa-phone"></i> Book a Free Call
+                </a>
+            </li>
+
+            <!-- Mobile Social Links -->
+            <li class="mobile-social" style="list-style:none;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <a href="#" class="btn-primary">Get Started</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+<section class="service-hero">
+  <div class="hero-content">
+    <div class="hero-icon-wrap"><i class="fas fa-palette"></i></div>
+    <div class="hero-label"><i class="fas fa-star"></i> Amazing WebTech</div>
+    <h1 class="hero-title"><span class="line1">UI / UX</span><span class="line2">Design</span></h1>
+    <p class="hero-desc">Creating beautiful, user-centred interfaces that delight users, simplify interactions, and drive measurable business results through thoughtful design.</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><i class="fas fa-user"></i> User Research</span>
+      <span class="hero-badge"><i class="fas fa-draw-polygon"></i> Wireframing</span>
+      <span class="hero-badge"><i class="fas fa-magic"></i> Prototyping</span>
+      <span class="hero-badge"><i class="fas fa-chart-line"></i> A/B Testing</span>
+    </div>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-hero-primary"><i class="fas fa-rocket"></i> Start Design Project</a>
+      <a href="#overview" class="btn-hero-outline"><i class="fas fa-eye"></i> View Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark2" id="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-left">
+        <div class="overview-label"><i class="fas fa-palette"></i> Design Experts</div>
+        <h2 class="overview-title">Design That <span>Converts</span></h2>
+        <p class="overview-desc">Our UI/UX team combines research, strategy, and creativity to craft interfaces that users love. We ensure every design decision is backed by data and focused on achieving your business goals.</p>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-users"></i></div><div class="fc-body"><h4>User Research</h4><p>Deep insights into user behaviour, needs, and pain points</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-sitemap"></i></div><div class="fc-body"><h4>Information Architecture</h4><p>Logical structure that guides users intuitively</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-object-group"></i></div><div class="fc-body"><h4>Interaction Design</h4><p>Micro-animations and interactions that delight users</p></div></div>
+          <div class="feature-card"><div class="fc-icon"><i class="fas fa-universal-access"></i></div><div class="fc-body"><h4>Accessibility</h4><p>WCAG compliant designs accessible to everyone</p></div></div>
+        </div>
+        <div class="benefits-box">
+          <div class="benefits-box-title"><i class="fas fa-star"></i> Design Deliverables</div>
+          <div class="benefits-list">
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>User Personas</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Journey Maps</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Wireframes</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Interactive Prototypes</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Design System</span></div>
+            <div class="benefit-row"><div class="bi"><i class="fas fa-check"></i></div><span>Usability Testing</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div class="img-wrap"><img src="img/uiux.jpg" alt="UI UX Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=380&fit=crop'"></div>
+        <div class="stats-row">
+          <div class="stat-cell"><span class="stat-num" data-count="300+">0</span><span class="stat-lbl">Designs Done</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-num" data-count="40%">0</span><span class="stat-lbl">Avg Conversion Lift</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-num" data-count="98%">0</span><span class="stat-lbl">Client Satisfaction</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark3">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">
+        <i class="fas fa-cogs"></i> Process</div>
+        <h2 class="section-title">Our Design <span>Process</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="process-num">01</div>
+          <h4>Research</h4>
+          <p>User interviews, competitor analysis and market research to inform every decision.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <div class="process-num">02</div>
+          <h4>Wireframing</h4>
+          <p>Low and high-fidelity wireframes mapping out every screen and interaction.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="process-num">03</div>
+          <h4>Visual Design</h4>
+          <p>Beautiful high-fidelity UI designs with your brand identity at the forefront.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="process-num">04</div>
+          <h4>Testing</h4>
+          <p>Usability testing and A/B tests to validate and optimise the final design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section section-dark2">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">
+        <i class="fas fa-tools"></i> Tools
+      </div>
+        <h2 class="section-title">Our <span>Design Tools</span></h2>
+      </div>
+      <div class="tools-wrap">
+        <span class="tool-chip">Figma</span>
+        <span class="tool-chip">Adobe XD</span>
+        <span class="tool-chip">Sketch</span>
+        <span class="tool-chip">InVision</span>
+        <span class="tool-chip">Maze</span>
+        <span class="tool-chip">Hotjar</span>
+        <span class="tool-chip">Miro</span>
+        <span class="tool-chip">Zeplin</span>
+        <span class="tool-chip">Principle</span>
+        <span class="tool-chip">ProtoPie</span>
+      </div>
+    </div>
+  </section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">
+        <i class="fas fa-question-circle"></i> FAQ
+      </div>
+      <h2 class="section-title">Design <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>What's the difference between UI and UX design?</span>
+          <div class="faq-icon">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">UX (User Experience) focuses on the overall feel and journey — how easy and enjoyable it is to use a product. UI (User Interface) is the visual layer — colours, typography, buttons, and visual elements. Both work together to create great products.
+
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Do I get source design files?</span>
+          <div class="faq-icon">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes! You receive all source files (Figma, Adobe XD, etc.), a complete design system, style guide, and developer-ready assets. Full ownership is transferred to you upon project completion.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>How many design revisions are included?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">We include unlimited revisions within the project scope. Our collaborative process ensures you're involved at every stage, so major changes are rare by the time we reach the final design phase.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready for a Design That Converts?</h2>
+    <p>Let's create user experiences that delight your customers and grow your business.</p>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn-primary-grad"><i class="fas fa-palette"></i> Start Design Project</a>
+      <a href="tel:+919099014070" class="btn-outline-white"><i class="fas fa-phone"></i> Call Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label"><i class="fas fa-th"></i> Related Services</div>
+      <h2 class="section-title">You Might Also <span>Need</span></h2>
+    </div>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="related-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web Development</h3>
+        <p>We'll bring your designs to life with clean, optimised code.</p>
+        <a href="websitedesign.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="related-card">
+        <div class="related-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile App Dev</h3>
+        <p>Native and cross-platform mobile apps with stunning interfaces.</p>
+        <a href="mobileapp.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="related-card">
+        <div class="related-icon"><i class="fas fa-building"></i></div>
+        <h3>Corporate Branding</h3>
+        <p>A cohesive brand identity to unify your UI/UX design language.</p>
+        <a href="branding.html" class="related-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="img/logo-dark.png" height="50px" width="50px">
+        <p>Creative digital agency delivering outstanding results for businesses worldwide.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>
+            <a href="websitedesign.html">Web Design</a>
+          </li>
+          <li><a href="mobileapp.html">Mobile Apps</a></li>
+          <li><a href="uiux.html">UI/UX Design</a></li>
+          <li><a href="seo.html">SEO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <div class="newsletter-wrap">
+            <input type="email" placeholder="Your email">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2021 Amazing WebTech · Made with <i class="fas fa-heart"></i> for great people.</p>
+      </div>
+    </div>
+  
+  </footer>
+<script src="services.js"></script>
+</body>
+</html>
